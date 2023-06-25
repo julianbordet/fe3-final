@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import Contact from "./Routes/Contact";
 import Home from "./Routes/Home";
 import Favs from "./Routes/Favs";
+import Detail from "./Routes/Detail";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/favs' element={<Favs />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/dentist/:id' element={<Detail/>} />
     </Routes>
   );
 }
