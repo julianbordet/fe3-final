@@ -4,7 +4,7 @@ import logo from '../images/DH.png'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='footerComponent'>
         <p>Powered by</p>
         <img src={logo} alt='DH-logo' />
     </footer>

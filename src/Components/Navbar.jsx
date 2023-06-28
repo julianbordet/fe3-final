@@ -7,11 +7,13 @@ import { pages } from '../Components/utils/Constants';
 const Navbar = () => {
 
   return (
-    <nav>
-      <button>Change theme</button>
-      <Link to='/'>Home</Link>
-      <Link to='/favs'>Favs</Link>
-      <Link to='/contact'>Contact</Link>
+    <nav className='navbar'>
+      <button className='navbarItem changeThemeButton'>Change theme</button>
+      <div className='navbarItem'>
+        <Link className='link' to='/'>Home</Link>
+        <Link className='link' to='/favs'>Favs</Link>
+        <Link className='link'to='/contact'>Contact</Link>
+      </div>
     </nav>
   )
 }
