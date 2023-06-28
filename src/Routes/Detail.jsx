@@ -19,7 +19,6 @@ const Detail = () => {
       .then(res => dispatch({ type: 'SET_DENTIST', payload: res.data }))
   }, [])
 
-
   return (
     <>
       <Navbar />
