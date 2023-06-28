@@ -9,27 +9,23 @@ import { useEffect, useState } from 'react'
 
 const Home = () => {
 
-  const { state } = useGlobalContext();
+  //const { state } = useGlobalContext();
 
   //ESTE FAV DENTISTS TIENE QUE SER PARTE DEL REDUCER
-  const [favDentists, setFavDentists] = useState([]);
+  //const [favDentists, setFavDentists] = useState([]);
+  const { state, dispatch } = useGlobalContext();
+
+
+
+
 
   useEffect(() => {
-    if( localStorage.getItem('favDentists').length == 0 ){
+    localStorage.setItem('favDentists', JSON.stringify(state.favs));
 
-    }
-
-    localStorage.setItem('favDentists', JSON.stringify(favDentists));
-
-  }, [favDentists]);
+  }, [state]);
 
   const saveFav = (dentist) => {
-    setFavDentists((prevState) => {
-      return [...prevState, dentist]
-        
-      
-    })
-    console.log(favDentists)
+    dispatch({ type: 'SET_FAV', payload: dentist })
   }
 
   return (

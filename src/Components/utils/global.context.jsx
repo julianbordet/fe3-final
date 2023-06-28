@@ -6,17 +6,23 @@ const AppState = createContext();
 export const initialState = {
   theme: "",
   data: [],
-  selectedDentist: {}
+  selectedDentist: {},
+  favs : []
 }
 
 const dentistReducer = (state, action) => {
   switch (action.type) {
     case 'SET_THEME':
-      return { theme: action.payload, data: state.data, selectedDentist: state.selectedDentist }
+      return { theme: action.payload, data: state.data, selectedDentist: state.selectedDentist, favs : state.favs }
     case 'SET_DATA':
-      return { theme: state.theme, data: action.payload, selectedDentist: state.selectedDentist }
+      return { theme: state.theme, data: action.payload, selectedDentist: state.selectedDentist, favs : state.favs }
     case 'SET_DENTIST':
-      return { theme: state.theme, data: state.data, selectedDentist: action.payload }
+      return { theme: state.theme, data: state.data, selectedDentist: action.payload, favs : state.favs }
+    case 'SET_FAV':
+      let updatedFavs = state.favs
+      let newFav = action.payload
+      updatedFavs.push(newFav)
+      return{...state, favs: updatedFavs}
     default:
       throw new Error()
   }
