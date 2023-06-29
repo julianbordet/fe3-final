@@ -3,25 +3,16 @@ import Card from '../Components/Card'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { useGlobalContext } from '../Components/utils/global.context'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
 
-  //const { state } = useGlobalContext();
-
-  //ESTE FAV DENTISTS TIENE QUE SER PARTE DEL REDUCER
-  //const [favDentists, setFavDentists] = useState([]);
   const { state, dispatch } = useGlobalContext();
-
-
-
-
 
   useEffect(() => {
     localStorage.setItem('favDentists', JSON.stringify(state.favs));
-
   }, [state]);
 
   const saveFav = (dentist) => {

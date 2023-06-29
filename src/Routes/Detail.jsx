@@ -17,7 +17,7 @@ const Detail = () => {
   useEffect(() => {
     axios(url)
       .then(res => dispatch({ type: 'SET_DENTIST', payload: res.data }))
-  }, [])
+  }, [dispatch, url])
 
   return (
     <>

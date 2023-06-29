@@ -3,11 +3,13 @@ import axios from "axios";
 
 const AppState = createContext();
 
+const initialFavDentistsState = JSON.parse(localStorage.getItem('favDentists')) ? JSON.parse(localStorage.getItem('favDentists')) : [];
+
 export const initialState = {
   theme: "",
   data: [],
   selectedDentist: {},
-  favs : []
+  favs : initialFavDentistsState
 }
 
 const dentistReducer = (state, action) => {
