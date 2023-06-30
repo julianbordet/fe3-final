@@ -92,6 +92,7 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  height: 100%;
 }
 
 table {
@@ -200,4 +201,21 @@ body{
 .routesLight {
   background-color: #dbe3e7;
   height:100%;
+}
+
+.typographyDark {
+  color:white;
+}
+
+.typographyLight {
+  color:black;
+}
+
+.backgroundDark{
+  background-color: #b8acac;
+}
+
+.backgroundLight{
+  
+  background-color: #556a77;
 }

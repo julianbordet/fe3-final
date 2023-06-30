@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <main className={state.theme === 'dark' ? 'routesDark' : 'routesLight'} >
       <Navbar />
-      <h1>Home</h1>
+      <h1 className={state.theme === 'dark' ? 'typographyDark' : 'typographyLight'}>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
         {state.data && state.data.map(dentista => <Card key={dentista.id} dentista={dentista} saveFav={saveFav} />)}
