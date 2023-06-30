@@ -20,7 +20,7 @@ const Home = () => {
   }
 
   return (
-    <main className="" >
+    <main className={state.theme === 'dark' ? 'routesDark' : 'routesLight'} >
       <Navbar />
       <h1>Home</h1>
       <div className='card-grid'>

@@ -172,7 +172,6 @@ body{
 
 .navbarItem{
   margin: 10px auto;
- 
 }
 
 .changeThemeButton{
@@ -192,4 +191,13 @@ body{
 .dark {
   background-color: #000;
   color: white;
+}
+
+.routesDark {
+  background-color: #45565d;
+  height:100%;
+}
+.routesLight {
+  background-color: #dbe3e7;
+  height:100%;
 }
