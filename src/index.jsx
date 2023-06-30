@@ -6,7 +6,6 @@ import App from './App';
 import GlobalContext from './Components/utils/global.context';
 
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GlobalContext>
@@ -15,5 +14,3 @@ root.render(
     </BrowserRouter>
   </GlobalContext>
 );
-
-

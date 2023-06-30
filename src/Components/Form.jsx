@@ -2,7 +2,6 @@ import React from "react";
 import { useGlobalContext } from "./utils/global.context";
 
 const Form = ({handleSubmit, setInputs}) => {
-  //Aqui deberan implementar el form completo con sus validaciones
 
   const { state, dispatch } = useGlobalContext();
 

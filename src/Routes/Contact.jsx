@@ -5,7 +5,6 @@ import Footer from '../Components/Footer'
 import { useState } from 'react'
 import { useGlobalContext } from '../Components/utils/global.context'
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Contact = () => {
 

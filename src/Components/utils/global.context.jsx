@@ -42,7 +42,6 @@ const GlobalContext = ({ children }) => {
       
   }, [])
 
-
   return (
     <AppState.Provider value={{
       state, dispatch

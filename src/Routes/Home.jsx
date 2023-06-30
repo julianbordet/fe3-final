@@ -5,8 +5,6 @@ import Footer from '../Components/Footer'
 import { useGlobalContext } from '../Components/utils/global.context'
 import { useEffect } from 'react'
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 const Home = () => {
 
   const { state, dispatch } = useGlobalContext();
@@ -24,7 +22,6 @@ const Home = () => {
       <Navbar />
       <h1 className={state.theme === 'dark' ? 'typographyDark' : 'typographyLight'}>Home</h1>
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
         {state.data && state.data.map(dentista => <Card key={dentista.id} dentista={dentista} saveFav={saveFav} />)}
       </div>
       <Footer />

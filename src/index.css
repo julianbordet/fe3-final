@@ -185,6 +185,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top:4rem;
 }
 
 .contactForm{
@@ -219,6 +220,7 @@ body{
   background-color: #000;
   color: white;
 }
+
 
 html{
   height: 100%;
