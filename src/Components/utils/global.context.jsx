@@ -6,7 +6,7 @@ const AppState = createContext();
 const initialFavDentistsState = JSON.parse(localStorage.getItem('favDentists')) ? JSON.parse(localStorage.getItem('favDentists')) : [];
 
 export const initialState = {
-  theme: "",
+  theme: "light",
   data: [],
   selectedDentist: {},
   favs : initialFavDentistsState

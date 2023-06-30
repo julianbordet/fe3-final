@@ -1,10 +1,14 @@
 import React from 'react'
 import logo from '../images/DH.png'
+import { useGlobalContext } from './utils/global.context';
 
 
 const Footer = () => {
+
+  const { state, dispatch } = useGlobalContext();
+
   return (
-    <footer className='footerComponent'>
+    <footer className={state.theme === 'dark' ? 'footerComponent dark' : 'footerComponent'}>
         <p>Powered by</p>
         <img src={logo} alt='DH-logo' />
     </footer>

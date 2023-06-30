@@ -177,7 +177,7 @@ body{
 
 .changeThemeButton{
   border-radius: 10px 100px / 120px;
-  background-color: #000;
+  background-color: #263ea0a5;
   color:white;
   padding: 10px;
 }
@@ -187,4 +187,9 @@ body{
   padding-right: 1.3rem;
   color:white;
   text-decoration-line: underline;  
+}
+
+.dark {
+  background-color: #000;
+  color: white;
 }
