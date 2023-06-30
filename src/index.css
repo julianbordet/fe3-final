@@ -182,6 +182,33 @@ body{
   padding: 10px;
 }
 
+.contactSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactForm{
+  height:100%;
+}
+
+.contactItem{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formItem{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.submitButton{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+}
+
 .link{
   padding-left: 1.3rem;
   padding-right: 1.3rem;
@@ -216,6 +243,5 @@ body{
 }
 
 .backgroundLight{
-  
   background-color: #556a77;
 }

@@ -32,11 +32,13 @@ const Contact = () => {
   return (
     <div>
       <Navbar/>
-      <h2>Quiere saber mas?</h2>
-      <p>Envienos sus preguntas y lo contactaremos</p>
-      <Form handleSubmit={handleSubmit} setInputs={setInputs}/>
-      {mostrar && !inputsValidos && <span>Por favor verifique su información nuevamente</span>} 
-      {mostrar && inputsValidos && <span>Gracias!, te contactaremos cuando antes vía mail</span>}
+      <div className="contactSection">
+        <h2 className="contactItem">Quiere saber mas?</h2>
+        <p className="contactItem">Envienos sus preguntas y lo contactaremos</p>
+        <Form handleSubmit={handleSubmit} setInputs={setInputs}/>
+        {mostrar && !inputsValidos && <span>Por favor verifique su información nuevamente</span>} 
+        {mostrar && inputsValidos && <span>Gracias!, te contactaremos cuando antes vía mail</span>}
+      </div>
       <Footer/>
     </div>
   )
