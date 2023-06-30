@@ -8,7 +8,7 @@ import { useGlobalContext } from '../Components/utils/global.context'
 
 const Contact = () => {
 
-  const { state, dispatch } = useGlobalContext();
+  const { state } = useGlobalContext();
 
   const [inputs, setInputs] = useState({
     input1: '',

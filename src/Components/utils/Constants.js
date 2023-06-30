@@ -4,3 +4,5 @@ const pages = {
     favs : '/favs',
     dentist : '/dentist/:id'
 }
+
+export { pages }

@@ -3,7 +3,7 @@ import { useGlobalContext } from "./utils/global.context";
 
 const Form = ({handleSubmit, setInputs}) => {
 
-  const { state, dispatch } = useGlobalContext();
+  const { state } = useGlobalContext();
 
   return (
     <div>

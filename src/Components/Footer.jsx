@@ -5,7 +5,7 @@ import { useGlobalContext } from './utils/global.context';
 
 const Footer = () => {
 
-  const { state, dispatch } = useGlobalContext();
+  const { state } = useGlobalContext();
 
   return (
     <footer className={state.theme === 'dark' ? 'footerComponent dark' : 'footerComponent'}>

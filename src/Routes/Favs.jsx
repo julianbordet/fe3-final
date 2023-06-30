@@ -7,7 +7,7 @@ import { useGlobalContext } from "../Components/utils/global.context";
 
 const Favs = () => {
 
-  const { state, dispatch } = useGlobalContext();
+  const { state } = useGlobalContext();
 
   const [favDentists, setfavDentists] = useState([]);
   

@@ -15,9 +15,9 @@ const Navbar = () => {
     <nav className={state.theme === 'dark' ? 'navbar dark' : 'navbar'}>
       <button onClick={handleThemeChange} className={state.theme === 'dark' ? 'navbarItem changeThemeButton dark' : 'navbarItem changeThemeButton'}>Change theme</button>
       <div className={state.theme === 'dark' ? 'navbarItem dark' : 'navbarItem'}>
-        <Link className='link' to='/'>Home</Link>
-        <Link className='link' to='/favs'>Favs</Link>
-        <Link className='link'to='/contact'>Contact</Link>
+        <Link className='link' to={pages.home}>Home</Link>
+        <Link className='link' to={pages.favs}>Favs</Link>
+        <Link className='link'to={pages.contact}>Contact</Link>
       </div>
     </nav>
   )
