@@ -3,10 +3,13 @@ import Form from '../Components/Form'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { useState } from 'react'
+import { useGlobalContext } from '../Components/utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Contact = () => {
+
+  const { state, dispatch } = useGlobalContext();
 
   const [inputs, setInputs] = useState({
     input1: '',
@@ -30,17 +33,17 @@ const Contact = () => {
   }
 
   return (
-    <div>
+    <section className={state.theme === 'dark' ? 'routesDark' : 'routesLight'}>
       <Navbar/>
       <div className="contactSection">
-        <h2 className="contactItem">Quiere saber mas?</h2>
-        <p className="contactItem">Envienos sus preguntas y lo contactaremos</p>
+        <h2  className={state.theme === 'dark' ? 'contactItem typographyDark' : 'contactItem typographyLight'}>Quiere saber mas?</h2>
+        <p className={state.theme === 'dark' ? 'contactItem typographyDark' : 'contactItem typographyLight'}>Envienos sus preguntas y lo contactaremos</p>
         <Form handleSubmit={handleSubmit} setInputs={setInputs}/>
         {mostrar && !inputsValidos && <span>Por favor verifique su información nuevamente</span>} 
         {mostrar && inputsValidos && <span>Gracias!, te contactaremos cuando antes vía mail</span>}
       </div>
       <Footer/>
-    </div>
+    </section>
   )
 }
 
